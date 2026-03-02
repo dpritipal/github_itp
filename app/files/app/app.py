@@ -147,13 +147,13 @@ def delete_image(imgname):
  file_path = join(app.config["UPLOAD_FOLDER"], fname)
 # Delete file from filesystem if it exists
 try:
-if exists(file_path):
- os.remove(file_path)
-print(f"Deleted: {fname}", file=sys.stdout)
-else:
-print(f"File not found: {fname}", file=sys.stderr)
+    if exists(file_path):
+        os.remove(file_path)
+        print(f"Deleted: {fname}", file=sys.stdout)
+    else:
+        print(f"File not found: {fname}", file=sys.stderr)
 except OSError as err:
-print(f"Filesystem error: {err}", file=sys.stderr)
+    print(f"Filesystem error: {err}", file=sys.stderr)
 return redirect("/")
 
 
