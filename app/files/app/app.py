@@ -138,7 +138,7 @@ def delete_image(imgname):
 # Define route to delete an image
 @app.route("/delete/<imgname>", methods=["POST"])
 def delete_image(imgname):
-"""
+ """
  Delete an image from the filesystem.
  Redirects to home page after deletion.
  """
