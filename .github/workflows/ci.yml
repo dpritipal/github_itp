@@ -1,6 +1,5 @@
 # Workflow name (appears in GitHub UI)
 name: CI Pipeline
-
 # Trigger events: when should this workflow run?
 on:
   push:
